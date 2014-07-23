@@ -3,6 +3,8 @@ import nopcommerce.misc.utils.WaitUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.Select;
 
+import java.util.List;
+
 /**
  * Created by Sasikala on 22/07/2014.
  */
@@ -25,8 +27,8 @@ public class RegisterUserPage extends abstractHeaderPage {
         enterUserDetails(customerInfo);
         WebElement registerButton = driver.findElement(By.xpath(".//*[@id='content-center']/form/div/div[2]/div/div/button"));
         registerButton.click();
-        return isErrorPresent();
-    }
+        return true;
+     }
 
     public void enterUserDetails(String[] customerInfo) {
 
@@ -36,9 +38,11 @@ public class RegisterUserPage extends abstractHeaderPage {
                     updateGender(customerInfo[i]);
                     break;
                 case 1:
+
                     updateFirstName(customerInfo[i]);
                     break;
                 case 2:
+
                     updateLastName(customerInfo[i]);
                     break;
                 case 3:
@@ -51,27 +55,35 @@ public class RegisterUserPage extends abstractHeaderPage {
                     //updateYear(customerInfo[i]);
                     break;
                 case 6:
+
                     updateEmail(customerInfo[i]);
                     break;
                 case 7:
+
                     updateUsername(customerInfo[i]);
                     break;
                 case 8:
+
                     updateCompany(customerInfo[i]);
                     break;
                 case 9:
+
                     updateVatNumber(customerInfo[i]);
                     break;
                 case 10:
+
                     updateNewLetter(customerInfo[i]);
                     break;
                 case 11:
+
                     updateTimezone(customerInfo[i]);
                     break;
                 case 12:
+
                     updatePassword(customerInfo[i]);
                     break;
                 case 13:
+
                     updateNewPassword(customerInfo[i]);
                     break;
 
@@ -82,28 +94,32 @@ public class RegisterUserPage extends abstractHeaderPage {
     }
 
     public boolean isErrorPresent(){
+        WaitUtils.pause(100);
         String pageSource = driver.getPageSource();
         boolean error_msg = false;
-        for ( int i = 0; i < 6; i++) {
+        for ( int i = 0; i < 5; i++) {
             switch (i) {
                 case 0:
+                    System.out.println("0");
                     error_msg = checkFirstName(pageSource);
                     break;
                 case 1:
+                    System.out.println("1");
                     error_msg = checkLastName(pageSource);
                     break;
                 case 2:
+                    System.out.println("2");
                     error_msg = checkUsername(pageSource);
                     break;
                 case 3:
+                    System.out.println("3");
                     error_msg = checkEmail(pageSource);
                     break;
                 case 4:
+                    System.out.println("4");
                     error_msg = checkPassword(pageSource);
                     break;
-                case 5:
-                    error_msg = checkConfirmPassword(pageSource);
-                    break;
+
                 default:
                     break;
             }
@@ -154,6 +170,7 @@ public class RegisterUserPage extends abstractHeaderPage {
     public void updateEmail(String email) {
         WebElement useremail = driver.findElement(By.id("Email"));
         useremail.clear();
+        WaitUtils.pause(2);
         useremail.sendKeys(email);
     }
 
@@ -194,7 +211,7 @@ public class RegisterUserPage extends abstractHeaderPage {
     }
 
     public boolean checkFirstName(String pageSource){
-        return   pageSource.contains("First name is required.");
+         return pageSource.contains("First name is required.");
     }
 
     public boolean checkLastName(String pageSource) {
@@ -202,7 +219,7 @@ public class RegisterUserPage extends abstractHeaderPage {
     }
 
     public boolean checkUsername(String pageSource){
-        return   pageSource.contains("The username is already in use");
+        return pageSource.contains("The username is already in use");
     }
 
     public boolean checkEmail(String pageSource){
@@ -210,12 +227,9 @@ public class RegisterUserPage extends abstractHeaderPage {
     }
 
     public boolean checkPassword(String pageSource){
-       return false;
+        return ( pageSource.contains("Password is required"));
     }
 
-    public boolean checkConfirmPassword(String pageSource){
-        return false;
-    }
 }
 
 

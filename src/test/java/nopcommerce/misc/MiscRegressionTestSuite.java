@@ -9,14 +9,16 @@ public class MiscRegressionTestSuite extends baseTestSuite
     
 private String username = "jamesmiller";
 private String password = "jm1234";
-private String category = "Books";
-private String product  = "Fast Cars, Picture Calendar 2013";
-private int qty=1;
-private String [] customerInfo = { "Male", "James" , "Miller", "30", "June", "1991", "jamesmiller@test.com", "jamesmiller", "testcom", " ", "Yes", "(UTC) Dublin, Edinburgh, Lisbon, London","jm1234", "jm1234"};
-private String [] updateCustomerInfo = { "Female", "Sames" , "Miller", "3", "July", "1990", "samesmiller@test.com", "samesmiller", "testercom", " ", "No   ", "(UTC-06:00) Central Time (US & Canada)"};
 
- Boolean registration_successful = true;
-    private String username1 = "Ben";
+private String [] newcustomerInfo = { "Male", "James" , "Miller", "30", "June", "1991", "jamesmiller@test.com", "jamesmiller", "testcom", " ", "Yes", "(UTC) Dublin, Edinburgh, Lisbon, London","jm1234", "jm1234"};
+
+private String [] updateCustomerInfo = { "Female", "Sam" , "Mill", "3", "July", "1990", "samesmil@test.com", "samesmil", "testercom", " ", "No   ", "(UTC-06:00) Central Time (US & Canada)"};
+
+private String [] customerInforevert = { "Male", "James" , "Miller", "30", "June", "1991", "jamesmiller@test.com", "jamesmiller", "testcom", " ", "Yes", "(UTC) Dublin, Edinburgh, Lisbon, London"};
+
+    private String firstname = "Benq";
+    private String firstname1 = "James";
+
     private String Lang_Deutsch = "Deutsch";
     private String Lang_English = "English";
     private String Currency_Dollar ="Dollar";
@@ -38,7 +40,7 @@ public void  registerNewUser()
 
     if (!registerUserPage.isUserAlreadyRegistered(username))
     {
-        assertTrue(registerUserPage.registerNewUser(customerInfo));
+        assertTrue(registerUserPage.registerNewUser(newcustomerInfo));
         homePage.logout();
     }
 }
@@ -46,7 +48,6 @@ public void  registerNewUser()
 @Test
    
 public void  updatePersonalDetails()
-    
 {
         
     HomePage homePage = new  HomePage();
@@ -64,6 +65,8 @@ public void  updatePersonalDetails()
     CustomerInfoPage customerInfoPage = new CustomerInfoPage();
 
     assertTrue(customerInfoPage.updateUserInfo(updateCustomerInfo));
+
+    assertTrue(customerInfoPage.updateUserInfo(customerInforevert));
 
     homePage.logout();
 
@@ -85,11 +88,17 @@ public void  updateFirstName(){
 
     CustomerInfoPage customerInfoPage = new CustomerInfoPage();
 
-    customerInfoPage.updateFirstName(username1);
+    customerInfoPage.updateFirstName(firstname);
+
+    customerInfoPage.savedetails();
 
     String pageSource = driver.getPageSource();
 
-    assertFalse(customerInfoPage.checkFirstName(pageSource));
+    assertTrue(customerInfoPage.checkFirstName(pageSource));
+
+    customerInfoPage.updateFirstName(firstname1);
+
+    customerInfoPage.savedetails();
 
 }
 
@@ -121,41 +130,23 @@ public void  updateFirstName(){
     public void select_Manufacture_From_HomePage() {
         HomePage homePage = new HomePage();
 
-        homePage.gotoLogin();
-
-        LoginPage loginPage = new LoginPage();
-
-        loginPage.loginAsConsumer(username, password);
-
-        homePage.select_first_manufacturer();
+        String manufacturer = homePage.select_first_manufacturer();
 
         ManufacturersPage manufacturespage = new ManufacturersPage();
 
-        assertTrue(manufacturespage.isMaufacturePage());
+        assertTrue(manufacturespage.isMaufacturePage(manufacturer));
 
-        manufacturespage.select_a_Product();
-
-   }
+    }
 
 @Test
     public void select_Manufacture_By_ViewAll() {
         HomePage homePage = new HomePage();
-
-        homePage.gotoLogin();
-
-        LoginPage loginPage = new LoginPage();
-
-        loginPage.loginAsConsumer(username, password);
 
         homePage.select_viewall_manufacture();
 
         ManufacturersPage manufacturespage = new ManufacturersPage();
 
         assertTrue(manufacturespage.isMaufactureListPage());
-
-        manufacturespage.select_first_Manufacturer();
-
-        manufacturespage.select_a_Product();
 
     }
 @Test
@@ -185,7 +176,7 @@ public void  updateFirstName(){
 
         HomePage homePage = new HomePage();
 
-        homePage.setLanguage(Currency_Dollar);
+        homePage.setCurrency(Currency_Dollar);
 
         assertTrue(homePage.verifyDollarSettings());
 
@@ -196,7 +187,7 @@ public void  updateFirstName(){
 
         HomePage homePage = new HomePage();
 
-        homePage.setLanguage(Currency_Euro);
+        homePage.setCurrency(Currency_Euro);
 
         assertTrue(homePage.verifyEuroSettings());
 

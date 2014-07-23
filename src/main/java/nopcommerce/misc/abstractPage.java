@@ -7,7 +7,6 @@ public class abstractPage {
 
     public static WebDriver driver;
 
-
     public abstractPage()
     {
            driver = BrowserFactory.getBrowser("firefox");
