@@ -1,7 +1,7 @@
 package nopcommerce.misc;
 
-import nopcommercemisc.utils.BrowserFactory;
-import nopcommercemisc.utils.REPORTER;
+import nopcommerce.misc.utils.BrowserFactory;
+import nopcommerce.misc.utils.REPORTER;
 import org.apache.log4j.Logger;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -19,13 +19,6 @@ import java.net.URL;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
-/**
- * Created with IntelliJ IDEA.
- * User: sriramangajala
- * Date: 20/07/2014
- * Time: 21:49
- * To change this template use File | Settings | File Templates.
- */
 public abstract class baseTestSuite {
     private static final Logger LOGGER  = Logger.getLogger(baseTestSuite.class);
     public static final boolean DebugSwitch = false;

@@ -21,6 +21,20 @@ public class WaitUtils {
 
     }
 
+    public static boolean isTextAvailable(String text)
+    {
+        return driver.getPageSource().contains(text);
+    }
+
+    public static void pause(int time)
+    {
+        try {
+            Thread.sleep(time*100);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
     public static void waitForElementDisplayed(By by) {
 
         WebDriverWait wait = new WebDriverWait(driver, 10);

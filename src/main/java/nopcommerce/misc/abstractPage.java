@@ -1,7 +1,5 @@
 package nopcommerce.misc;
 import nopcommerce.misc.utils.BrowserFactory;
-
-
 import org.openqa.selenium.WebDriver;
 
 

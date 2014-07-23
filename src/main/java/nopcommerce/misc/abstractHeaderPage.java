@@ -10,9 +10,12 @@ package nopcommerce.misc;
 public abstract class abstractHeaderPage extends abstractPage{
     public void gotoLogin() {
 
+
     }
 
     public void gotoShoppingCart() {
 
     }
+
+
 }
