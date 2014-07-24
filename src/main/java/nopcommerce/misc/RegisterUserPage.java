@@ -101,23 +101,23 @@ public class RegisterUserPage extends abstractHeaderPage {
             switch (i) {
                 case 0:
                     System.out.println("0");
-                    error_msg = checkFirstName(pageSource);
+                    error_msg = isFirstNameValid(pageSource);
                     break;
                 case 1:
                     System.out.println("1");
-                    error_msg = checkLastName(pageSource);
+                    error_msg = isLastNameValid(pageSource);
                     break;
                 case 2:
                     System.out.println("2");
-                    error_msg = checkUsername(pageSource);
+                    error_msg = isUsernameValid(pageSource);
                     break;
                 case 3:
                     System.out.println("3");
-                    error_msg = checkEmail(pageSource);
+                    error_msg = isEmailValid(pageSource);
                     break;
                 case 4:
                     System.out.println("4");
-                    error_msg = checkPassword(pageSource);
+                    error_msg = isPasswordValid(pageSource);
                     break;
 
                 default:
@@ -210,23 +210,23 @@ public class RegisterUserPage extends abstractHeaderPage {
         confirmPassword.sendKeys(confirmpassword);
     }
 
-    public boolean checkFirstName(String pageSource){
+    public boolean isFirstNameValid(String pageSource){
          return pageSource.contains("First name is required.");
     }
 
-    public boolean checkLastName(String pageSource) {
+    public boolean isLastNameValid(String pageSource) {
         return   pageSource.contains("Last name is required.");
     }
 
-    public boolean checkUsername(String pageSource){
+    public boolean isUsernameValid(String pageSource){
         return pageSource.contains("The username is already in use");
     }
 
-    public boolean checkEmail(String pageSource){
+    public boolean isEmailValid(String pageSource){
         return ( pageSource.contains("Wrong email") | pageSource.contains("The e-mail address is already in use") | pageSource.contains("The specified email already exists") );
     }
 
-    public boolean checkPassword(String pageSource){
+    public boolean isPasswordValid(String pageSource){
         return ( pageSource.contains("Password is required"));
     }
 

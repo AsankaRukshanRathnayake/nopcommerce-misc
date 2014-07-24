@@ -1,0 +1,20 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="3425" measuredH="843" mockupW="2815" mockupH="645">
+  <controls>
+    <control controlID="4" controlTypeID="__group__" x="610" y="293" w="2815" h="550" measuredW="2815" measuredH="550" zOrder="0" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::SiteMap" x="0" y="0" w="-1" h="-1" measuredW="2815" measuredH="550" zOrder="0" locked="false" isInGroup="4">
+          <controlProperties>
+            <hrefs>Nopc%26bm%3BNopc.bmml%26bm%3BNopc.bmml%26bm%3BNopc.bmml%2C%2C%2C%2C%2C%2C%2C%2C%2C%2C%2C%2C%2C%2C%2C%2C%2C%2C%2C%2C%2C%2C%2C%2C%2C</hrefs>
+            <map>%3Carea%20shape%3D%22rect%22%20coords%3D%221335%2C95%2C1479%2C165%22%20href%3D%22Nopc.bmml%22%20alt%3D%22Nopc%22%20id%3D%220%22/%3E</map>
+            <text>AbstractHeaderPage%0A-AbstractPage%0A--%20LoginPage%0A---%20RegistrationPage%0A----CustomerInfoPage%0A--HomePage%0A---BestSellerPage%0A---CatagoryPage%0A---CommunityPollPage%0A---ManufacturerPage%0A---RecentlyViewedProductsPage%0A---FeaturedProductsPage%0A---PopularTagsPage%0A---InformationPage%0A---MyAccountsPage%0A----OrdersPage%0A----DownloadPage%0A----BackInStockPage%0A----RewardsPointPage%0A----ChangePasswordPage%0A----AvatarPage%0A--SearchPage%0A--ContactUsPage%0A--NewProductPage%0A--Blog%0A--Inbox</text>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="18" controlTypeID="com.balsamiq.mockups::Title" x="1427" y="198" w="-1" h="-1" measuredW="1605" measuredH="43" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Page%20Object%20Model%20%28POM%29%20Design%20for%20the%20miscellaneous%20functionalities%20in%20nopCommerce%20</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

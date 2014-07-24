@@ -1,0 +1,280 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="3259" measuredH="967" mockupW="2415" mockupH="824">
+  <controls>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::Accordion" x="1812" y="235" w="165" h="90" measuredW="150" measuredH="159" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <selectedIndex>1</selectedIndex>
+        <text>AbstractPage%0AConstructor%0A-%20+AbstractPage%28%29</text>
+        <verticalScrollbar>true</verticalScrollbar>
+      </controlProperties>
+    </control>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::Accordion" x="1812" y="401" w="165" h="84" measuredW="152" measuredH="159" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <selectedIndex>0</selectedIndex>
+        <text>AbstractHeaderPage%0AAction%0A-%20+gotoLogin%28%29%0A-%20+logout%28%29%0A-%20+setLanguage%28%29%0A-%20+setCurrency%28%29%0AReaction%0A-%20+isSiteLanguageSet%28%29%0A-%20+isSiteCurrencySet%28%29</text>
+        <value>11</value>
+        <verticalScrollbar>true</verticalScrollbar>
+      </controlProperties>
+    </control>
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::Arrow" x="1889" y="325" w="10" h="76" measuredW="150" measuredH="100" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <direction>top</direction>
+        <leftArrow>true</leftArrow>
+        <rightArrow>false</rightArrow>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::Accordion" x="844" y="726" w="159" h="92" measuredW="222" measuredH="159" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <selectedIndex>0</selectedIndex>
+        <text>RegisterationPage%0AAction%0A-%20+registerNewUser%28String%20%5B%5D%29%0A-%20+enterUserDetails%28String%20%5B%5D%29%0A-%20+updateGender%28String%29%0A-%20+updateFirstName%28String%29%0A-%20+updateLastName%28String%29%0A-%20+updateDateName%28String%29%0A-%20+updateUserName%28String%29%0A-%20+updateEmailString%29%0A-%20+updateCompany%28String%29%0A-%20+updateVat%28String%29%0A-%20+updateNewsletter%28String%29%0A-%20+updatePassword%28String%29%0AReaction%0A-%20+isUserAlreadyRegistered%28String%29%0A-%20+isUserNameAvailable%28String%29%0A-%20+isFirstNameValid%28String%29%0A-%20+isLastNameValid%28String%29%0A-%20+isUserNameValid%28String%29%0A-%20+isEmailValid%28String%29%0A-%20+isPasswordValid%28String%29</text>
+        <value>11</value>
+        <verticalScrollbar>true</verticalScrollbar>
+      </controlProperties>
+    </control>
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::Accordion" x="844" y="577" w="164" h="84" measuredW="167" measuredH="159" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <selectedIndex>0</selectedIndex>
+        <text>LoginPage%0AAction%0A-%20+gotoRegisternewUser%28%29%0A-%20+loginAsConsumer%0AReaction%0A-%20+isUserLoggedIn%28%29</text>
+        <value>11</value>
+        <verticalScrollbar>true</verticalScrollbar>
+      </controlProperties>
+    </control>
+    <control controlID="12" controlTypeID="com.balsamiq.mockups::Accordion" x="844" y="881" w="160" h="86" measuredW="312" measuredH="159" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <selectedIndex>0</selectedIndex>
+        <text>CustomerInfoPage%0AAction%0A-%20+%20boolean%20updateUserInfo%28String%5B%5D%20customerInfo%29%0A-%20+%20saveDetails%28%29%0AReaction</text>
+        <value>11</value>
+        <verticalScrollbar>true</verticalScrollbar>
+      </controlProperties>
+    </control>
+    <control controlID="14" controlTypeID="com.balsamiq.mockups::Arrow" x="918" y="659" w="10" h="71" measuredW="150" measuredH="100" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <direction>top</direction>
+        <leftArrow>true</leftArrow>
+        <rightArrow>false</rightArrow>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="15" controlTypeID="com.balsamiq.mockups::Arrow" x="918" y="818" w="10" h="69" measuredW="150" measuredH="100" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <direction>top</direction>
+        <leftArrow>true</leftArrow>
+        <rightArrow>false</rightArrow>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="18" controlTypeID="com.balsamiq.mockups::Accordion" x="1813" y="562" w="158" h="84" measuredW="203" measuredH="159" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <selectedIndex>0</selectedIndex>
+        <text>HomePage%0AAction%0A-%20+select_first_manufacturer%28%29%0A-%20+select_viewall_manufacture%28%29%0AReaction%0A-%20</text>
+        <value>11</value>
+        <verticalScrollbar>true</verticalScrollbar>
+      </controlProperties>
+    </control>
+    <control controlID="19" controlTypeID="com.balsamiq.mockups::Arrow" x="1889" y="486" w="10" h="76" measuredW="150" measuredH="100" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <direction>top</direction>
+        <leftArrow>true</leftArrow>
+        <rightArrow>false</rightArrow>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="20" controlTypeID="com.balsamiq.mockups::Title" x="1161" y="143" w="-1" h="-1" measuredW="1605" measuredH="43" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Page%20Object%20Model%20%28POM%29%20Design%20for%20the%20miscellaneous%20functionalities%20in%20nopCommerce%20</text>
+      </controlProperties>
+    </control>
+    <control controlID="22" controlTypeID="com.balsamiq.mockups::Arrow" x="1889" y="647" w="10" h="40" measuredW="150" measuredH="100" zOrder="11" locked="false" isInGroup="-1">
+      <controlProperties>
+        <direction>top</direction>
+        <leftArrow>true</leftArrow>
+        <rightArrow>false</rightArrow>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="23" controlTypeID="com.balsamiq.mockups::Arrow" x="1292" y="680" w="1385" h="10" measuredW="150" measuredH="100" zOrder="12" locked="false" isInGroup="-1">
+      <controlProperties>
+        <curvature>0</curvature>
+        <leftArrow>false</leftArrow>
+        <rightArrow>false</rightArrow>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="24" controlTypeID="com.balsamiq.mockups::Accordion" x="1218" y="726" w="159" h="92" measuredW="202" measuredH="159" zOrder="13" locked="false" isInGroup="-1">
+      <controlProperties>
+        <selectedIndex>0</selectedIndex>
+        <text>ManufacturerPage%0AReaction%0A-%20+isMaufacturePage%28String%29%0A-%20+isMaufactureListPage%28String%29%0AAction</text>
+        <value>11</value>
+        <verticalScrollbar>true</verticalScrollbar>
+      </controlProperties>
+    </control>
+    <control controlID="25" controlTypeID="com.balsamiq.mockups::Arrow" x="1292" y="680" w="10" h="46" measuredW="150" measuredH="100" zOrder="14" locked="false" isInGroup="-1">
+      <controlProperties>
+        <direction>top</direction>
+        <leftArrow>false</leftArrow>
+        <rightArrow>false</rightArrow>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="26" controlTypeID="com.balsamiq.mockups::Accordion" x="2416" y="726" w="159" h="92" measuredW="150" measuredH="186" zOrder="15" locked="false" isInGroup="-1">
+      <controlProperties>
+        <selectedIndex>-1</selectedIndex>
+        <text>Item%20One%0AItem%20Two%0A-%20Sub-Item%202.1%0A-%20Sub-Item%202.2%0AItem%20Three%0AItem%20Four</text>
+        <value>11</value>
+        <verticalScrollbar>true</verticalScrollbar>
+      </controlProperties>
+    </control>
+    <control controlID="27" controlTypeID="com.balsamiq.mockups::Accordion" x="1418" y="725" w="159" h="92" measuredW="150" measuredH="186" zOrder="16" locked="false" isInGroup="-1">
+      <controlProperties>
+        <selectedIndex>-1</selectedIndex>
+        <text/>
+        <value>11</value>
+        <verticalScrollbar>true</verticalScrollbar>
+      </controlProperties>
+    </control>
+    <control controlID="28" controlTypeID="com.balsamiq.mockups::Accordion" x="1617" y="726" w="159" h="92" measuredW="150" measuredH="186" zOrder="17" locked="false" isInGroup="-1">
+      <controlProperties>
+        <selectedIndex>-1</selectedIndex>
+        <text/>
+        <value>11</value>
+        <verticalScrollbar>true</verticalScrollbar>
+      </controlProperties>
+    </control>
+    <control controlID="29" controlTypeID="com.balsamiq.mockups::Accordion" x="1815" y="724" w="159" h="92" measuredW="150" measuredH="186" zOrder="18" locked="false" isInGroup="-1">
+      <controlProperties>
+        <selectedIndex>-1</selectedIndex>
+        <text/>
+        <value>11</value>
+        <verticalScrollbar>true</verticalScrollbar>
+      </controlProperties>
+    </control>
+    <control controlID="30" controlTypeID="com.balsamiq.mockups::Accordion" x="2011" y="723" w="159" h="92" measuredW="150" measuredH="186" zOrder="19" locked="false" isInGroup="-1">
+      <controlProperties>
+        <selectedIndex>-1</selectedIndex>
+        <text/>
+        <value>11</value>
+        <verticalScrollbar>true</verticalScrollbar>
+      </controlProperties>
+    </control>
+    <control controlID="31" controlTypeID="com.balsamiq.mockups::Accordion" x="2211" y="726" w="159" h="92" measuredW="150" measuredH="186" zOrder="20" locked="false" isInGroup="-1">
+      <controlProperties>
+        <selectedIndex>-1</selectedIndex>
+        <text/>
+        <value>11</value>
+        <verticalScrollbar>true</verticalScrollbar>
+      </controlProperties>
+    </control>
+    <control controlID="32" controlTypeID="com.balsamiq.mockups::Arrow" x="1492" y="680" w="10" h="46" measuredW="150" measuredH="100" zOrder="21" locked="false" isInGroup="-1">
+      <controlProperties>
+        <direction>top</direction>
+        <leftArrow>false</leftArrow>
+        <rightArrow>false</rightArrow>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="33" controlTypeID="com.balsamiq.mockups::Arrow" x="1691" y="680" w="10" h="46" measuredW="150" measuredH="100" zOrder="22" locked="false" isInGroup="-1">
+      <controlProperties>
+        <direction>top</direction>
+        <leftArrow>false</leftArrow>
+        <rightArrow>false</rightArrow>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="34" controlTypeID="com.balsamiq.mockups::Arrow" x="1889" y="680" w="10" h="46" measuredW="150" measuredH="100" zOrder="23" locked="false" isInGroup="-1">
+      <controlProperties>
+        <direction>top</direction>
+        <leftArrow>false</leftArrow>
+        <rightArrow>false</rightArrow>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="35" controlTypeID="com.balsamiq.mockups::Arrow" x="2085" y="680" w="10" h="46" measuredW="150" measuredH="100" zOrder="24" locked="false" isInGroup="-1">
+      <controlProperties>
+        <direction>top</direction>
+        <leftArrow>false</leftArrow>
+        <rightArrow>false</rightArrow>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="36" controlTypeID="com.balsamiq.mockups::Arrow" x="2285" y="680" w="10" h="46" measuredW="150" measuredH="100" zOrder="25" locked="false" isInGroup="-1">
+      <controlProperties>
+        <direction>top</direction>
+        <leftArrow>false</leftArrow>
+        <rightArrow>false</rightArrow>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="37" controlTypeID="com.balsamiq.mockups::Arrow" x="2665" y="680" w="10" h="46" measuredW="150" measuredH="100" zOrder="26" locked="false" isInGroup="-1">
+      <controlProperties>
+        <direction>top</direction>
+        <leftArrow>false</leftArrow>
+        <rightArrow>false</rightArrow>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="38" controlTypeID="com.balsamiq.mockups::Arrow" x="2490" y="680" w="10" h="46" measuredW="150" measuredH="100" zOrder="27" locked="false" isInGroup="-1">
+      <controlProperties>
+        <direction>top</direction>
+        <leftArrow>false</leftArrow>
+        <rightArrow>false</rightArrow>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="39" controlTypeID="com.balsamiq.mockups::Accordion" x="2607" y="726" w="159" h="92" measuredW="150" measuredH="159" zOrder="28" locked="false" isInGroup="-1">
+      <controlProperties>
+        <selectedIndex>0</selectedIndex>
+        <text>%20MyAccountPage%0AReaction%0A-%20%0AAction%0A-%20gotoAccountPage%28%29</text>
+        <value>11</value>
+        <verticalScrollbar>true</verticalScrollbar>
+      </controlProperties>
+    </control>
+    <control controlID="41" controlTypeID="com.balsamiq.mockups::Accordion" x="2900" y="581" w="158" h="84" measuredW="150" measuredH="186" zOrder="29" locked="false" isInGroup="-1">
+      <controlProperties>
+        <selectedIndex>-1</selectedIndex>
+        <text/>
+        <value>11</value>
+        <verticalScrollbar>true</verticalScrollbar>
+      </controlProperties>
+    </control>
+    <control controlID="42" controlTypeID="com.balsamiq.mockups::Arrow" x="918" y="513" w="2076" h="10" measuredW="150" measuredH="100" zOrder="30" locked="false" isInGroup="-1">
+      <controlProperties>
+        <curvature>0</curvature>
+        <leftArrow>false</leftArrow>
+        <rightArrow>false</rightArrow>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="43" controlTypeID="com.balsamiq.mockups::Arrow" x="2984" y="513" w="10" h="70" measuredW="150" measuredH="100" zOrder="31" locked="false" isInGroup="-1">
+      <controlProperties>
+        <direction>top</direction>
+        <leftArrow>false</leftArrow>
+        <rightArrow>false</rightArrow>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="44" controlTypeID="com.balsamiq.mockups::Arrow" x="918" y="518" w="10" h="60" measuredW="150" measuredH="100" zOrder="32" locked="false" isInGroup="-1">
+      <controlProperties>
+        <direction>top</direction>
+        <leftArrow>false</leftArrow>
+        <rightArrow>false</rightArrow>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="45" controlTypeID="com.balsamiq.mockups::Arrow" x="2667" y="818" w="10" h="40" measuredW="150" measuredH="100" zOrder="33" locked="false" isInGroup="-1">
+      <controlProperties>
+        <direction>top</direction>
+        <leftArrow>true</leftArrow>
+        <rightArrow>false</rightArrow>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="46" controlTypeID="com.balsamiq.mockups::Arrow" x="1874" y="858" w="1385" h="10" measuredW="150" measuredH="100" zOrder="34" locked="false" isInGroup="-1">
+      <controlProperties>
+        <curvature>0</curvature>
+        <leftArrow>false</leftArrow>
+        <rightArrow>false</rightArrow>
+        <text/>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

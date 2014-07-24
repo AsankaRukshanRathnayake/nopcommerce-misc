@@ -34,7 +34,9 @@ public void  registerNewUser()
 
     homePage.gotoLogin();
 
-    homePage.gotoRegisternewUser();
+    LoginPage loginPage = new LoginPage();
+
+    loginPage.gotoRegisternewUser();
 
     RegisterUserPage registerUserPage = new RegisterUserPage();
 
@@ -94,7 +96,7 @@ public void  updateFirstName(){
 
     String pageSource = driver.getPageSource();
 
-    assertTrue(customerInfoPage.checkFirstName(pageSource));
+    assertTrue(customerInfoPage.isFirstNameValid(pageSource));
 
     customerInfoPage.updateFirstName(firstname1);
 
@@ -123,7 +125,7 @@ public void  updateFirstName(){
 
         String pageSource = driver.getPageSource();
 
-        assertTrue(customerInfoPage.checkFirstName(pageSource));
+        assertTrue(customerInfoPage.isFirstNameValid(pageSource));
 
     }
 @Test
@@ -156,7 +158,7 @@ public void  updateFirstName(){
 
         homePage.setLanguage(Lang_Deutsch);
 
-        assertTrue(homePage.verifyDuetschSettings());
+        assertTrue(homePage.isSiteLanguageSet(Lang_Deutsch));
 
 }
 
@@ -167,7 +169,7 @@ public void  updateFirstName(){
 
         homePage.setLanguage(Lang_English);
 
-        assertTrue(homePage.verifyEnglishSettings());
+        assertTrue(homePage.isSiteLanguageSet(Lang_English));
 
     }
 
@@ -178,7 +180,7 @@ public void  updateFirstName(){
 
         homePage.setCurrency(Currency_Dollar);
 
-        assertTrue(homePage.verifyDollarSettings());
+        assertTrue(homePage.isCurrencySet(Currency_Dollar));
 
     }
 
@@ -189,7 +191,7 @@ public void  updateFirstName(){
 
         homePage.setCurrency(Currency_Euro);
 
-        assertTrue(homePage.verifyEuroSettings());
+        assertTrue(homePage.isCurrencySet(Currency_Euro));
 
     }
 }

@@ -5,9 +5,7 @@ import org.openqa.selenium.WebElement;
 
 public abstract class abstractHeaderPage extends abstractPage{
 
-    public void gotoRegisternewUser() {
-        driver.findElement(By.linkText("Register")).click();
-    }
+
 
     public void gotoLogin(){
         WebElement loginButton = driver.findElement(By.xpath("//div[@id='shopbar-account']/a/span[1]/span[2]"));
@@ -35,14 +33,18 @@ public abstract class abstractHeaderPage extends abstractPage{
         }
     }
 
-    public  boolean verifyDuetschSettings() {
-        WebElement homepagetext = driver.findElement(By.xpath("//*[@id='nav-home']/ul[1]/li[1]/a"));
-        return (homepagetext.getText().trim().equals("Startseite"));
-    }
+    public  boolean isSiteLanguageSet(String language) {
+        if ( language.equals("Deutsch")) {
+            WebElement homepagetext = driver.findElement(By.xpath("//*[@id='nav-home']/ul[1]/li[1]/a"));
+            return (homepagetext.getText().trim().equals("Startseite"));
+        }
+        if (language.equals("English"))
+        {
+            String url = driver.getCurrentUrl();
+            return (url.contains("frontend.smartstore.net/en/"));
+        }
+        return false;
 
-    public boolean verifyEnglishSettings() {
-        String url = driver.getCurrentUrl();
-        return (url.contains("frontend.smartstore.net/en/"));
     }
 
     public void setCurrency(String currency) {
@@ -58,14 +60,15 @@ public abstract class abstractHeaderPage extends abstractPage{
         }
     }
 
-    public boolean verifyDollarSettings() {
+    public boolean isCurrencySet(String currency) {
         WebElement total = driver.findElement(By.xpath("//*[@id='shopbar-cart']/a/span[1]/span[1]/span"));
-        return (total.getText().contains("$"));
-    }
-
-    public boolean verifyEuroSettings() {
-        WebElement total = driver.findElement(By.xpath("//*[@id='shopbar-cart']/a/span[1]/span[1]/span"));
-        return (total.getText().contains("€"));
+        if ( currency.equals("Euro")) {
+            return (total.getText().contains("€"));
+        }
+        if (currency.equals("Dollar")) {
+            return (total.getText().contains("$"));
+        }
+        return false;
     }
 
     public void gotoShoppingCart() {
