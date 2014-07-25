@@ -1,6 +1,9 @@
 package nopcommerce.misc;
 
+import junit.framework.Assert;
 import org.junit.Test;
+import org.openqa.selenium.By;
+
 import static org.junit.Assert.*;
 
 public class MiscRegressionTestSuite extends baseTestSuite
@@ -23,7 +26,7 @@ private String [] customerInforevert = { "Male", "James" , "Miller", "30", "June
     private String Lang_English = "English";
     private String Currency_Dollar ="Dollar";
     private String Currency_Euro = "Euro";
-
+    HomePage homePage = new HomePage();
 
     ////-----------end of data----------//
 @Test
@@ -187,12 +190,29 @@ public void  updateFirstName(){
     @Test
     public void change_currency_to_Euro() {
 
-        HomePage homePage = new HomePage();
+
 
         homePage.setCurrency(Currency_Euro);
 
         assertTrue(homePage.isCurrencySet(Currency_Euro));
 
+    }
+
+    @Test
+    public void verifyRecentyViewdPage()
+    {
+
+        homePage.navigatetologinpage();
+        LoginPage loginPage=new LoginPage();
+        loginPage.loginAsConsumer(username,password);
+
+        homePage.navigateToBooks();
+        Assert.assertEquals("Books",driver.findElement(By.xpath(".//*[@id='content-center']/div/div[1]/h1")).getText());
+   driver.findElement(By.xpath(".//*[@id='content-center']/div/div[2]/div[3]/div/div/div[1]/div[1]/article/figure/a/img")).click();
+   driver.findElement(By.xpath(".//*[@id='logobar']/a/img")).click();
+   driver.findElement(By.xpath(".//*[@id='content-left']/div[4]/div[2]/ul/li[5]/a")).click();
+   homePage.navigateToRecentlyviewedpage();
+   Assert.assertTrue(driver.findElement(By.cssSelector("BODY")).getText().contains("Autos der Superlative"));
     }
 }
 
