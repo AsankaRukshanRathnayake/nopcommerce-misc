@@ -1,6 +1,7 @@
 package nopcommerce.misc;
 
 import nopcommerce.misc.utils.WaitUtils;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import static org.junit.Assert.*;
@@ -17,7 +18,7 @@ public class ManufacturersPage extends HomePage {
         System.out.println( manufacturer);
         System.out.println( manufacturerTitle.getText()) ;
         System.out.println(manufacturer.equals(manufacturerTitle.getText()) );
-        assertEquals(manufacturerTitle.getText(),manufacturer);
+        Assert.assertEquals(manufacturerTitle.getText(), manufacturer);
         return true;
     }
 

@@ -120,19 +120,13 @@ public void  updateFirstName(){
     public void select_Manufacture_From_HomePage() {
 
         String manufacturer = homePage.select_first_manufacturer();
-
-        ManufacturersPage manufacturespage = new ManufacturersPage();
-
         Assert.assertTrue(manufacturespage.isMaufacturePage(manufacturer));
 
     }
 
 @Test
     public void select_Manufacture_By_ViewAll() {
-
-
         homePage.select_viewall_manufacture();
-
         Assert.assertTrue(manufacturespage.isMaufactureListPage());
 
     }
