@@ -145,6 +145,7 @@ public abstract class baseTestSuite {
        // driver = new RemoteWebDriver(new URL("http://cb_ram-core:2c259106-416c-4890-9e0a-9f09ccb96c74@ondemand.saucelabs.com:80/wd/hub"), capabilities);
 
         driver.get("http://frontend.smartstore.net/en/");
+        driver.manage().window().maximize();
     }
 
 //    protected void startBrowser(String browser) {

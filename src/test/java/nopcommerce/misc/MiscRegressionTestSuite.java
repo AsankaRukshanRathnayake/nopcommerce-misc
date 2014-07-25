@@ -205,15 +205,12 @@ public void  updateFirstName(){
         homePage.navigatetologinpage();
         LoginPage loginPage=new LoginPage();
         loginPage.loginAsConsumer(username,password);
-
         homePage.navigateToBooks();
-        Assert.assertEquals("Books",driver.findElement(By.xpath(".//*[@id='content-center']/div/div[1]/h1")).getText());
-   driver.findElement(By.xpath(".//*[@id='content-center']/div/div[2]/div[3]/div/div/div[1]/div[1]/article/figure/a/img")).click();
-   driver.findElement(By.xpath(".//*[@id='logobar']/a/img")).click();
-   driver.findElement(By.xpath(".//*[@id='content-left']/div[4]/div[2]/ul/li[5]/a")).click();
-   homePage.navigateToRecentlyviewedpage();
-   Assert.assertTrue(driver.findElement(By.cssSelector("BODY")).getText().contains("Autos der Superlative"));
-    }
+        Assert.assertEquals("Books", driver.findElement(By.xpath(".//*[@id='content-center']/div/div[1]/h1")).getText());
+        homePage.viewProducts();
+        RecentlyViewedProductPage rvp=new RecentlyViewedProductPage();
+        rvp.verifyViewedProductShownInRecentlyViewedProductsPage();
+   }
 }
 
 
