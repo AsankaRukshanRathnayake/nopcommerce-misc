@@ -16,4 +16,9 @@ public class MyAccountPage extends abstractHeaderPage{
         WebElement myaccountlink = driver.findElement(By.xpath("//*[@id='shopbar-account']/ul/li[1]/a"));
         myaccountlink.click();
     }
+
+    public void CommunityPoll() {
+        WebElement commpoll = driver.findElement(By.id("pollanswers-1"));
+        commpoll.click();
+    }
 }
