@@ -18,6 +18,24 @@ public class HomePage extends abstractHeaderPage {
 
     }
 
+    public String select_first_Popular_tags() {
+
+        WebElement firstPapulartags = driver.findElement(By.xpath("//*[@id='content-left']/div[3]/div[1]"));
+        firstPapulartags.click();
+        return  firstPapulartags.getText();
+    }
+
+    public void select_viewall_Popular_tags(){
+        WebElement allPopulartags = driver.findElement(By.xpath("//*[@id='content-left']/div[3]/div[2]/div[2]/a"));
+        allPopulartags.click();
+
+    }
+
+
+
+
+
+
     public void navigateToBooks() {
         driver.findElement(By.linkText("Books")).click();
     }
