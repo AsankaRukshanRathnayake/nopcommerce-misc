@@ -52,21 +52,13 @@ private String [] customerInforevert = { "Male", "James" , "Miller", "30", "June
     @Test
     public void AddNewAddress()
     {
-
         homePage.gotoLogin();
-
         loginPage.loginAsConsumer(username, password);
-
         myAccountPage.gotoAccountPage();
-
         addAddressPage.gotoaddresspage();
-
         addAddressPage.gotoNewAddressPage();
-
         addAddressPage.accountAddNewAddress(newAddressInfo[0],newAddressInfo[1],newAddressInfo[2],newAddressInfo[3],newAddressInfo[4],newAddressInfo[5],newAddressInfo[6],newAddressInfo[7]);
-
-       addAddressPage.gotoNewAddressPage();
-
+        addAddressPage.gotoNewAddressPage();
         WaitUtils.pause(100);
 
     }

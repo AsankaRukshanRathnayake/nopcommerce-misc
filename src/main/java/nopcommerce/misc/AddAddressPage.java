@@ -65,10 +65,15 @@ public class AddAddressPage extends abstractHeaderPage {
 
        // driver.findElement(By.xpath("//div[9]/div/div/a/span")).sendKeys("Germany");
 
-        WebElement dropDownListBox = driver.findElement(By.xpath("html/body/div[2]/div/input"));
+       // WebElement dropDownListBox = driver.findElement(By.xpath("//*[@id='s2id_Address_CountryId']/a/span"));
 
-        Select clickThis = new Select(dropDownListBox); clickThis.selectByValue("Germany");
-clickThis.selectByVisibleText("Germany");
+        driver.findElement(By.xpath(".//*[@id='s2id_Address_CountryId']/a")).click();
+        driver.findElement(By.xpath(".//*[@id='s2id_Address_CountryId']/a")).sendKeys("Germany");
+//      driver.findElement(By.xpath(".//*[@id='s2id_Address_CountryId']/a")).click();
+        Select clickThis=new Select(driver.findElement(By.xpath(".//*[@id='s2id_Address_CountryId']/a")));
+
+       clickThis.selectByVisibleText("Germany");
+   //driver.findElement(By.xpath(".//*[@id='s2id_Address_CountryId']/a")).click();
 
 
 
