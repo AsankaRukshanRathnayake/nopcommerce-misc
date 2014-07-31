@@ -37,7 +37,7 @@ public class MiscRegressionTestSuite extends baseTestSuite {
     RecentlyViewedProductPage rvp = new RecentlyViewedProductPage();
     AddAddressPage addAddressPage = new AddAddressPage();
     ChangePasswordPage changepassword = new ChangePasswordPage();
-    CommunityPoll communityPoll=new CommunityPoll();
+    CommunityPoll communityPoll = new CommunityPoll();
 
 //--------------shahab work Data...............//
 
@@ -247,11 +247,9 @@ public class MiscRegressionTestSuite extends baseTestSuite {
     }
 
 
-
     @Test
 
-   public void addcommunitypoll()
-    {
+    public void addcommunitypoll() {
 
         homePage.gotoLogin();
 
@@ -264,5 +262,79 @@ public class MiscRegressionTestSuite extends baseTestSuite {
         homePage.logout();
 
     }
-}
 
+//------- THIS IS @IMCHANDU WORK --------------------------------------------------- //
+
+    SiteMapPage siteMapPage = new SiteMapPage(driver);
+    SearchPage searchPage = new SearchPage(driver);
+    BaseClass baseClass = new BaseClass(driver);
+
+    @Test
+    public void loginWithValidCredentials() {
+
+        baseClass.loginAttempt("test13", "Insoft12");
+        Assert.assertEquals(driver.findElement(By.xpath(".//*[@id='shopbar-account']/a/span[1]/span[1]")).getText(), "test13");
+
+    }
+
+    @Test
+    public void loginWithInvalidCredentials() {
+
+        baseClass.loginAttempt("test13", "chandu12");
+        Assert.assertEquals(driver.findElement(By.xpath("//*[@id=\"content-center\"]/div/div[2]/div[1]/div[2]/div/div[1]")).getText(), "Returning Customer");
+    }
+
+
+    @Test
+    public void searchWithProductAvailable() {
+
+        baseClass.url();
+        baseClass.goToSearchPage();
+        Assert.assertEquals(driver.findElement(By.xpath(".//*[@id='content-center']/div/div[1]/h1")).getText(), "Search");
+        searchPage.searchWithProdName("Iphone 5");
+        Assert.assertEquals(driver.findElement(By.xpath(".//*[@id='content-center']/div/div[2]/form/div[4]/div[1]/div/div/div/article/div[2]/h3/a/span")).getText(), "Apple iPhone 5");
+        baseClass.waitforsometime();
+
+    }
+
+    @Test
+    public void searchWithProductNotAvailable() {
+        baseClass.url();
+        baseClass.goToSearchPage();
+        Assert.assertEquals(driver.findElement(By.xpath(".//*[@id='content-center']/div/div[1]/h1")).getText(), "Search");
+        searchPage.searchWithProdName("Iphone 5s");
+        Assert.assertEquals(driver.findElement(By.xpath(".//*[@id='content-center']/div/div[2]/form/div[3]/span")).getText(), "No products were found that matched your criteria.");
+        baseClass.waitforsometime();
+    }
+
+    @Test
+    public void searchWithoutProduct() {
+        baseClass.url();
+        baseClass.goToSearchPage();
+        Assert.assertEquals(driver.findElement(By.xpath(".//*[@id='content-center']/div/div[1]/h1")).getText(), "Search");
+        searchPage.searchWithProdName("");
+        //Assert.assertEquals(driver.findElement(By.xpath(".//*[@id='content-center']/div/div[2]/form/div[1]/div[1]")).getText(),"Search term minimum length is 3 characters");
+        baseClass.waitforsometime();
+    }
+
+    @Test
+    public void SiteMapSearchWithinCategory() {
+        baseClass.url();
+        baseClass.goToSiteMapPage();
+        Assert.assertEquals(driver.findElement(By.xpath(".//*[@id='content-center']/div/div[1]/h1")).getText(), "Sitemap");
+        siteMapPage.siteMapSearchByCategory("Computer");
+        Assert.assertEquals(driver.findElement(By.xpath(".//*[@id='content-center']/div/div[1]/h1")).getText(), "Computer");
+        siteMapPage.waitforsometime();
+    }
+
+    @Test
+    public void SiteMapSearchWithinManufacturer() {
+
+        siteMapPage.url();
+        siteMapPage.goToSiteMapPage();
+        Assert.assertEquals(driver.findElement(By.xpath(".//*[@id='content-center']/div/div[1]/h1")).getText(), "Sitemap");
+        siteMapPage.siteMapSearchByManufacture("Zara");
+        Assert.assertEquals(driver.findElement(By.xpath(".//*[@id='content-center']/div/div[1]/h1")).getText(), "Zara");
+    }
+
+}
