@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="MiscRegressionSuite" parallel="tests" thread-count="2">
+    <test name="MiscRegressionTestSuiteTests">
+        <classes>
+            <!-- Test class for regression tests -->
+            <class name="nopcommerce.misc.MiscRegressionTestSuite">
+                <methods>
+                    <!-- List all test methods you want to run -->
+                    <include name="AddNewAddress"/>
+                    <include name="select_Popular_tags_From_HomePage"/>
+                    <include name="select_Popular_tags_By_ViewAll"/>
+                    <include name="registerNewUser"/>
+                    <include name="updatePersonalDetails"/>
+                    <include name="updateFirstName"/>
+                    <include name="invalidFirstName"/>
+                    <include name="select_Manufacture_From_HomePage"/>
+                    <include name="select_Manufacture_By_ViewAll"/>
+                    <include name="change_language_to_Duetsch"/>
+                    <include name="change_language_to_English"/>
+                    <include name="change_currency_to_Dollars"/>
+                    <include name="change_currency_to_Euro"/>
+                    <include name="verifyRecentyViewdPage"/>
+                    <include name="changepassword"/>
+                    <include name="addcommunitypoll"/>
+                    <include name="loginWithValidCredentials"/>
+                    <include name="loginWithInvalidCredentials"/>
+                    <include name="searchWithProductAvailable"/>
+                    <include name="searchWithProductNotAvailable"/>
+                    <include name="searchWithoutProduct"/>
+                    <include name="SiteMapSearchWithinCategory"/>
+                    <include name="SiteMapSearchWithinManufacturer"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
