@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="NopCommerce Regression Suite" parallel="tests" thread-count="2">
+    <!-- This is the test suite configuration -->
+    <test name="MiscRegressionTestSuite">
+        <!-- Define the classes that you want to include in the test suite -->
+        <classes>
+            <class name="nopcommerce.misc.MiscRegressionTestSuite">
+            </class>
+        </classes>
+    </test>
+
+</suite>
